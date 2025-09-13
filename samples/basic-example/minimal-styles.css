@@ -1,0 +1,58 @@
+/* Minimal CSS focusing on structure and readability for printouts */
+.header {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.nav-item {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Print-specific styles */
+@media print {
+  .header {
+    border-bottom: 2px solid #000;
+    page-break-after: avoid;
+  }
+  
+  .navigation {
+    display: none; /* Hide navigation in print */
+  }
+  
+  .content {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Ensure proper page breaks */
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  p {
+    page-break-inside: avoid;
+    orphans: 3;
+    widows: 3;
+  }
+}
