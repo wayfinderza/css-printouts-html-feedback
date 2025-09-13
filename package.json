@@ -1,0 +1,33 @@
+{
+  "name": "css-printouts-html-feedback",
+  "version": "1.0.0",
+  "description": "Tools for creating minimal CSS printouts and PDF generation for structural feedback",
+  "main": "index.js",
+  "scripts": {
+    "clean-css": "node scripts/utilities/css-cleanup.js",
+    "generate-pdf": "node scripts/converters/html-to-pdf.js",
+    "example": "npm run clean-css samples/basic-example/original-styles.css samples/basic-example/minimal-output.css && npm run generate-pdf samples/basic-example/template.html samples/basic-example/example-output.pdf"
+  },
+  "keywords": [
+    "css",
+    "pdf",
+    "printouts",
+    "feedback",
+    "html",
+    "accessibility",
+    "structure"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wayfinderza/css-printouts-html-feedback.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
